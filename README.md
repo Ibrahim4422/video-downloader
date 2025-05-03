@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🎥 Video Downloader - Frontend
 
-## Getting Started
+A sleek and minimalist UI that lets users paste a video link and download it directly to their device.
 
-First, run the development server:
+Built with **React** and **TailwindCSS**.
+
+---
+
+## 📸 Preview
+
+![App Screenshot](./screenshot.png)
+
+---
+
+## 💡 Features
+
+- Paste a link from YouTube, TikTok, Instagram, or others
+- Submit the link to initiate download
+- Responsive and minimalist UI
+- 🔜 **Planned**: Select quality (HD / SD / Audio Only)
+
+---
+
+## 🛠 Tech Stack
+
+- ⚛️ React (with Vite)
+- 💨 Tailwind CSS
+- 🎨 Lucide React Icons
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repo
+
+```bash
+git clone https://github.com/Ibrahim2122/video-downloader.git
+cd video-downloader
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Run Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then visit:
+👉 http://localhost:5173
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### 🧱 Build for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+Build files will be in the dist/ folder.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📡 Backend Integration (Planned)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This frontend is being integrated with a FastAPI backend that will:
 
-## Deploy on Vercel
+- Accept a video URL via POST
+- Download the video using yt-dlp
+- Return the file as a downloadable response
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Planned API:
+
+```http
+POST /download
+Content-Type: application/x-www-form-urlencoded
+
+url=https://example.com/video
+```
+
+Response: video/mp4 or download stream
+
+## 👨‍💻 Author
+
+Made with ❤️ by @Ibrahim2122
